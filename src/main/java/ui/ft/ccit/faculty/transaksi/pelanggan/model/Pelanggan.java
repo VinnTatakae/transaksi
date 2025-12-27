@@ -1,14 +1,14 @@
-package ui.ft.ccit.faculty.transaksi.pemasok.model;
+package ui.ft.ccit.faculty.transaksi.pelanggan.model;
 
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "pemasok")
-public class Pemasok {
+@Table(name = "pelanggan")
+public class Pelanggan {
 
     @Id
-    @Column(name = "id_pemasok", length = 4)
-    private String idPemasok;
+    @Column(name = "id_pelanggan", length = 4)
+    private String idPelanggan;
 
     @Column(name = "nama", length = 255, nullable = false)
     private String nama;
@@ -19,23 +19,23 @@ public class Pemasok {
     @Column(name = "telepon", length = 20)
     private String telepon;
 
-    protected Pemasok() {
-        // for JPA
+    protected Pelanggan() {
+        // JPA
     }
 
-    public Pemasok(String idPemasok, String nama, String alamat, String telepon) {
-        this.idPemasok = idPemasok;
+    public Pelanggan(String idPelanggan, String nama, String alamat, String telepon) {
+        this.idPelanggan = idPelanggan;
         this.nama = nama;
         this.alamat = alamat;
         this.telepon = telepon;
     }
 
-    public String getIdPemasok() {
-        return idPemasok;
+    public String getIdPelanggan() {
+        return idPelanggan;
     }
 
-    public void setIdPemasok(String idPemasok) {
-        this.idPemasok = idPemasok;
+    public void setIdPelanggan(String idPelanggan) {
+        this.idPelanggan = idPelanggan;
     }
 
     public String getNama() {
